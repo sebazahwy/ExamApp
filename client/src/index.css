@@ -1,3 +1,4 @@
+/* Global color and font variables */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -15,6 +16,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  /* General page font and rendering settings */
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
@@ -25,11 +27,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* Smaller font size for smaller screens */
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 }
 
+/* Dark mode colors */
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -45,15 +49,18 @@
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
+  /* Make social icons visible in dark mode */
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
 }
 
+/* Remove default body margin */
 body {
   margin: 0;
 }
 
+/* Main React root container */
 #root {
   width: 1126px;
   max-width: 100%;
@@ -66,6 +73,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Main headings style */
 h1,
 h2 {
   font-family: var(--heading);
@@ -73,28 +81,38 @@ h2 {
   color: var(--text-h);
 }
 
+/* Large page title */
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
+  /* Responsive title size */
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
+/* Section title */
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
+  /* Responsive section title size */
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
+/* Remove default paragraph margin */
 p {
   margin: 0;
 }
 
+/* Shared font style for code and counter */
 code,
 .counter {
   font-family: var(--mono);
@@ -103,6 +121,7 @@ code,
   color: var(--text-h);
 }
 
+/* Inline code style */
 code {
   font-size: 15px;
   line-height: 135%;
